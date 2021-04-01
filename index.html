@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<html lang="el">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+        <title>Green Kebab Grill Restaurant</title>
+        <meta name="keywords" content="Green Kebab Grill Restaurant">
+        <meta name="description" content="Green Kebab Grill Restaurant">
+
+        <meta name="”geo.position”" content="”38.984453;35.434644“">
+        <meta name="”geo.placename”" content="”Greece“">
+        <meta name="”geo.region”" content="”EL-EL“">
+
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+        
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Owl Theme Default CSS -->
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<!-- Animate CSS -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- Flaticon CSS -->
+<link rel="stylesheet" href="css/flaticon.css">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<!-- Nice Select CSS -->
+<link rel="stylesheet" href="css/nice-select.css">
+<!-- Imagelightbox CSS -->
+<link rel="stylesheet" href="css/imagelightbox.min.css">
+<!-- Meanmenu CSS -->
+<link rel="stylesheet" href="css/meanmenu.css">
+<!-- Date Picker CSS -->
+<link rel="stylesheet" href="css/date-picker.css">
+<!-- Date Picker CSS -->
+<link rel="stylesheet" href="css/odometer.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="css/responsive.css">
+
+<link href="/assets/plugins/fancybox-master/dist/jquery.fancybox.min.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+<link href="/assets/animate.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css">
+<style>
+    .preloader{
+        position:fixed;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:100%;
+        z-index:999999;
+        background-color:#ffffff;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-image:url("images/logo.png");
+        background-size: 150px auto;
+    }
+    .pre_load{
+        position:fixed;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:100%;
+        z-index:999999;
+        background-position:center 15%;
+        background-repeat:no-repeat;
+        background-image:url("fonts/loading.svg");
+        background-size: 80px auto;
+    }
+    .rv_language{
+        width: 252px;
+        height: auto;
+        top: 16%;
+        z-index: 10;
+        position: fixed;
+        right: -200px;
+        transition:0.5s all;
+    }
+    .rv_language:hover{
+        right: 0;
+    }
+    .rv_lang{
+        float: left;
+        width: 200px;
+        background: #323232;
+        padding: 10px;
+        padding-left: 20px;
+        border-radius:0 0 0 10px;
+
+        -webkit-box-shadow: 10px 10px 21px -14px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 21px -14px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 21px -14px rgba(0,0,0,0.75);
+        position: relative;
+        z-index: 2;
+        margin-left: 52px;
+    }
+    .rv_lang .lang_text{
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .rv_lang img{}
+
+    .rv_lang-icon{
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        background: #323232;
+        border-radius:10px 0 0 10px;
+        -webkit-box-shadow: 10px 10px 33px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 33px -9px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 33px -9px rgba(0,0,0,0.75);
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-iteration-count: infinite;
+        width: 50%;
+        text-align: left;
+        z-index: 1;
+        /*! float: left; */
+    }
+
+    .rv_lang h4{
+        margin-top: 5px!important;
+        margin-bottom: 12px!important;
+    }
+    .rv_lang ul{
+        width:100%;
+        padding-left: 0!important;
+        margin-bottom: 0!important;
+    }
+
+
+
+    .rv_lang ul li{
+        width:100%;
+        padding:5px;
+        border-top:1px solid #3a3a3a;
+        color:#fff;
+        border-radius:5px;
+        list-style-type: none!important;
+    }
+
+    .rv_lang ul li a img{
+        margin-right: 5px;
+    }
+
+    .rv_lang ul li a{
+        color:#fff;
+        font-size: 14px;
+        text-decoration: none!important;
+    }
+    .rv_lang ul li:hover{
+        background:#585858;
+
+    }
+
+
+    iframe{
+        width: 100%;
+    }
+    input:focus{
+        outline: none!important;
+        box-shadow: none!important;
+    }
+    textarea:focus{
+        outline: none!important;
+        box-shadow: none!important;
+    }
+
+    .formBtn{
+        padding: 10px 20px;
+        float: right;
+        border: 2px solid #323232;
+        font-size: 15px;
+        color: #fff;
+        background-color: #323232;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    .formBtn:hover{
+        background-color: #fff;
+        color: #323232;
+    }
+    .formBtn:focus{
+        outline: none!important;
+    }
+    .alert{
+        position: relative;
+        padding: .75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: .25rem;
+    }
+    .alert-danger{
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+</style>            </head>
+        
+
+
+<body class="home-body" onload="if($('.preloader').length){$('.preloader').delay(200).fadeOut(500);} ">
+<div class="preloader">
+</div>
+
+<!-- Start Navbar Area -->
+<div class="asahi-nav">
+    <div class="navbar-area fixed-top">
+        <!-- Menu For Mobile Device -->
+        <div class="mobile-nav">
+            <a href="https://greenkebab.gr/" class="logo">
+                <img class="lazy" data-src="/uploads/logo.png" alt="Green Kebab Grill Restaurant">
+            </a>
+            <div class="others-option" style="display: inline-block!important;z-index: 9999999;position: absolute;right: 20px;top: 20px;">
+                <a href="tel:+800-987-65-43" class="menu-btn contact-number">
+                    <i class="flaticon-phone-call"></i>
+                    2108210990
+                </a>
+                <a href="#" data-toggle="modal" data-target="#myModal2" class="menu-btn side-menu" style="font-size: 26px;color: #fff;">
+                    <i class="flaticon-menu"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Menu For Desktop Device -->
+        <div class="main-nav asahi-nav-style-two">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container">
+                    <a href="https://greenkebab.gr/" class="navbar-brand">
+                        <img class="lazy" data-src="/uploads/logo.png" alt="Green Kebab Grill Restaurant" width="150px">
+                    </a>
+
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-item" href="https://greenkebab.gr/">Κεντρική Σελίδα</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://greenkebab.gr/Εταιρικός">Εταιρικός</a></li><li class="nav-item"><a class="nav-link dropdown-toggle " href="https://greenkebab.gr/Μενού">Μενού </a><ul class="dropdown-menu"><li class="nav-item"><a class="nav-link" href="https://greenkebab.gr/Μενού/Σούπες">Σούπες</a></li><li class="nav-item"><a class="nav-link" href="https://greenkebab.gr/Μενού/Τύποι-Σχαρών">Τύποι Σχαρών</a></li><li class="nav-item"><a class="nav-link" href="https://greenkebab.gr/Μενού/Ζουμερά-Πιάτα">Ζουμερά Πιάτα</a></li></ul></li><li class="nav-item"><a class="nav-link" href="https://greenkebab.gr/Ανακοίνωση">Ανακοίνωση</a></li>
+
+
+                        </ul>
+                        <div class="others-option">
+
+                            <a href="te:2108210990" class="menu-btn side-menu">
+                                2108210990
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Navbar Area -->
+<!-- Start Sidebar Modal -->
+<div class="sidebar-modal">
+    <div class="modal right fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">
+									<i class="fa fa-times"></i>
+								</span>
+                    </button>
+                    <h2 class="modal-title" id="myModalLabel2">
+                        <a href="https://greenkebab.gr/">
+                            <img class="lazy" data-src="/uploads/logo.png" alt="Green Kebab Grill Restaurant">
+                        </a>
+                    </h2>
+                </div>
+                <div class="modal-body">
+
+                    <div class="sidebar-modal-widget">
+                        <h3 class="title">Μενού</h3>
+                        <ul>
+                            <li><a href="https://greenkebab.gr/"><i class="flaticon-right-arrow-forward"></i> Κεντρική Σελίδα</a></li>
+                            <li><a href="https://greenkebab.gr/Εταιρικός"><i class="flaticon-right-arrow-forward"></i> Εταιρικός</a></li><li><a href="https://greenkebab.gr/Μενού"><i class="flaticon-right-arrow-forward"></i> Μενού</a></li><li><a href="https://greenkebab.gr/Ανακοίνωση"><i class="flaticon-right-arrow-forward"></i> Ανακοίνωση</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="sidebar-modal-widget">
+                        <h3 class="title">Επικοινωνήστε Μαζί Μας</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fa fa-map-marker"></i>
+                                Διεύθυνση
+                                <span>Ioulianou 81, Athens 10439</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope"></i>
+                                E-Mail
+                                <span>greenkebab.athens@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>
+                                Τηλέφωνο
+                                <span>2108210990, +306985900073</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-modal-widget">
+                        <h3 class="title">Τα Κοινωνικά Δίκτυα</h3>
+                        <ul class="social-list">
+                            <li><a href="https://www.facebook.com/" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a></li><li><a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a></li><li><a href="https://www.instagram.com/greenkebab_athens/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a></li><li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><i class="fa fa-pinterest"></i></a></li><li><a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa fa-youtube"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Sidebar Modal -->
+            
+       
+                   
+    <!-- Start Hero Slider Area -->
+    <section class="hero-slider-area">
+        <div class="hero-slider owl-carousel owl-theme">
+                            <div class="hero-slider-item slider-item-bg-1" style="background-image: url(timthumb_3.php);">
+                    <div class="d-table">
+                        <div class="d-table-cell">
+                            <div class="container">
+                                <div class="hero-slider-text">
+                                    <span class="lg-text">Green Kebab Grill Restaurant</span>
+                                    <h1>TAVUK IZGARA</h1>
+                                    <p></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="hero-slider-item slider-item-bg-1" style="background-image: url(timthumb_1.php);">
+                    <div class="d-table">
+                        <div class="d-table-cell">
+                            <div class="container">
+                                <div class="hero-slider-text">
+                                    <span class="lg-text">Green Kebab Grill Restaurant</span>
+                                    <h1>KEBAP</h1>
+                                    <p></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="hero-slider-item slider-item-bg-1" style="background-image: url(timthumb_2.php);">
+                    <div class="d-table">
+                        <div class="d-table-cell">
+                            <div class="container">
+                                <div class="hero-slider-text">
+                                    <span class="lg-text">Green Kebab Grill Restaurant</span>
+                                    <h1>IZGARA ET</h1>
+                                    <p></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <div class="hero-slider-item slider-item-bg-1" style="background-image: url(timthumb.php);">
+                    <div class="d-table">
+                        <div class="d-table-cell">
+                            <div class="container">
+                                <div class="hero-slider-text">
+                                    <span class="lg-text">Green Kebab Grill Restaurant</span>
+                                    <h1>KUZU ŞİŞ</h1>
+                                    <p></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+        </div>
+        <div class="call-us">
+            <div class="call-icon">
+                <i class="flaticon-phone-call"></i>
+                <div class="call-us-text">
+                    <span>Για Την Κράτηση</span>
+                    <p> 2108210990</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Slider Area -->
+    <!-- Start Our History Area -->
+    <section class="our-histry-area our-histry-area-two">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="history-title">
+                        <h2><span>Εταιρικός</span></h2>
+                        <img data-src="/dist/assets/img/shape/1.png" alt="Εταιρικός" class="lazy">
+                        <p></p><h2 style="color: rgb(102, 102, 102); font-family: Barlow, sans-serif;"><b style="background-color: rgb(255, 255, 255);">GREEN KEBAB</b></h2><h2 style="color: rgb(102, 102, 102); font-family: Barlow, sans-serif;">Hizmetinizdeyiz...</h2><p></p>
+
+                        <a class="default-btn-two" href="https://greenkebab.gr/Εταιρικός">
+                           Περισσότερα
+                            <i class="flaticon-next"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="lazy" data-src="https://greenkebab.gr/timthumb.php?src=uploads/_1589407438_974211.jpg&amp;w=570&amp;h=500&amp;zc=1&amp;q=100" alt="Εταιρικός">
+                </div>
+            </div>
+        </div>
+        <div class="shape shape-1">
+            <img data-src="/dist/assets/img/shape/2.png" alt="Shape" class="lazy">
+        </div>
+        <div class="shape shape-2">
+            <img data-src="/dist/assets/img/shape/3.png" alt="Shape" class="lazy">
+        </div>
+    </section>
+    <!-- End Our History Area -->
+    <section class="suitable-menu-shape ptb-100">
+        <div class="container">
+            <div class="row">
+
+
+                                                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-menu-item">
+                            <div class="menu-img">
+                                <img data-src="https://greenkebab.gr/timthumb.php?src=uploads/_resim_1589409691_.jpg&amp;w=223&amp;h=222&amp;zc=1&amp;q=100" alt="Σούπες" class="lazy">
+                            </div>
+                            <div class="item-text">
+                                <h3>
+                                    <a href="https://greenkebab.gr/Μενού/Σούπες">Σούπες</a>
+                                </h3>
+                                <p></p>
+                                <ul>
+                                    <li>
+                                        <a class="default-btn" href="https://greenkebab.gr/Μενού/Σούπες">Αναθεώρηση</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                                                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-menu-item">
+                            <div class="menu-img">
+                                <img data-src="https://greenkebab.gr/timthumb.php?src=uploads/_resim_1589409105_.jpg&amp;w=223&amp;h=222&amp;zc=1&amp;q=100" alt="Τύποι Σχαρών" class="lazy">
+                            </div>
+                            <div class="item-text">
+                                <h3>
+                                    <a href="https://greenkebab.gr/Μενού/Τύποι-Σχαρών">Τύποι Σχαρών</a>
+                                </h3>
+                                <p></p>
+                                <ul>
+                                    <li>
+                                        <a class="default-btn" href="https://greenkebab.gr/Μενού/Τύποι-Σχαρών">Αναθεώρηση</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                                                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-menu-item">
+                            <div class="menu-img">
+                                <img data-src="https://greenkebab.gr/timthumb.php?src=uploads/_resim_1589409833_.jpg&amp;w=223&amp;h=222&amp;zc=1&amp;q=100" alt="Ζουμερά Πιάτα" class="lazy">
+                            </div>
+                            <div class="item-text">
+                                <h3>
+                                    <a href="https://greenkebab.gr/Μενού/Ζουμερά-Πιάτα">Ζουμερά Πιάτα</a>
+                                </h3>
+                                <p></p>
+                                <ul>
+                                    <li>
+                                        <a class="default-btn" href="https://greenkebab.gr/Μενού/Ζουμερά-Πιάτα">Αναθεώρηση</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+
+            </div>
+        </div>
+    </section>
+
+            
+<!-- Start Footer Area -->
+<footer class="footer-area ptb-100-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-widget">
+                    <a href="https://greenkebab.gr/">
+                        <img data-src="/uploads/beyazLogo.png" class="lazy" alt="Green Kebab Grill Restaurant" width="120">
+                    </a>
+                    <p>Usta ellerin yorumladığı iştah açıcı kebaplarla birlikte, görsel bir şölenin keyfini çıkarmak için sizleri GREEN KEBAB GRILL Restaurant’a bekliyoruz…</p>
+
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-6">
+                <div class="single-widget single-widget-1">
+                    <h3>Το Quick Menu</h3>
+                    <ul class="footer-menu">
+                        <li><a href="https://greenkebab.gr/"><i class="flaticon-right-arrow-forward"></i> Αρχική Σελίδα</a></li>
+                        <li><a href="https://greenkebab.gr/Εταιρικός"><i class="flaticon-right-arrow-forward"></i> Εταιρικός</a></li><li><a href="https://greenkebab.gr/Μενού"><i class="flaticon-right-arrow-forward"></i> Μενού</a></li><li><a href="https://greenkebab.gr/Ανακοίνωση"><i class="flaticon-right-arrow-forward"></i> Ανακοίνωση</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-6">
+                <div class="single-widget single-widget-1">
+                                        <h3>Μενού</h3>
+                    <ul class="footer-menu">
+
+
+                                                                                                                                        <li><a href="https://greenkebab.gr/Μενού/Σούπες"><i class="flaticon-right-arrow-forward"></i> Σούπες</a></li>
+                                                                                                                                        <li><a href="https://greenkebab.gr/Μενού/Τύποι-Σχαρών"><i class="flaticon-right-arrow-forward"></i> Τύποι Σχαρών</a></li>
+                                                                                                                                        <li><a href="https://greenkebab.gr/Μενού/Ζουμερά-Πιάτα"><i class="flaticon-right-arrow-forward"></i> Ζουμερά Πιάτα</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="single-widget single-widget-2">
+                    <h3>Επικοινωνήστε Μαζί Μας</h3>
+                    <ul>
+                        <li class="address-s">
+                            Ioulianou 81, Athens 10439
+                        </li>
+                        <li><a href="tel:2108210990">Τηλέφωνο:    2108210990</a></li>
+                        <li><a href="mailto:greenkebab.athens@gmail.com">E-Mail:    greenkebab.athens@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+
+<!-- Start Footer Bottom Area -->
+<footer class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <ul class="social-list">
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a></li><li><a href="https://twitter.com/" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a></li><li><a href="https://www.instagram.com/greenkebab_athens/" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i></a></li><li><a href="https://www.pinterest.com/" target="_blank" rel="nofollow"><i class="fa fa-pinterest"></i></a></li><li><a href="https://www.youtube.com/" target="_blank" rel="nofollow"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="copy-right">
+                    <p>
+                        © 2021 Green Kebab Grill Restaurant. Όλα τα δικαιώματα διατηρούνται.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <ul class="bank-card">
+                    <li>
+                        <a href="https://sevenmedya.com" rel="nofollow" target="_blank">
+                            <img data-src="/assets/img/sevenbeyaz.png" style="width: 60px;" alt="Seven Medya" class="lazy">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Bottom Area -->
+
+<!-- Start Go Top Area -->
+<div class="go-top-area">
+    <div class="go-top-wrap">
+        <div class="go-top-btn-wrap">
+            <div class="go-top go-top-btn">
+                <i class="flaticon-arrows"></i>
+                <i class="flaticon-arrows"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Go Top Area -->
+
+
+<!-- Jquery Slim JS -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<!-- Popper JS -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Meanmenu JS -->
+<script src="js/jquery.meanmenu.js"></script>
+<!-- Nice Select JS -->
+<script src="js/jquery.nice-select.min.js"></script>
+<!-- Wow JS -->
+<script src="js/wow.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="js/owl.carousel.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="js/bootstrap-datepicker.min.js"></script>
+<!-- Imagelightbox JS -->
+<script src="js/imagelightbox.min.js"></script>
+<!-- Appear JS -->
+<script src="js/jquery.appear.js"></script>
+<!-- Odometer JS -->
+<script src="js/odometer.min.js"></script>
+<!-- Custom JS -->
+<script src="js/custom.js"></script>
+
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/lazyload.js"></script>
+<script src="js/lazyImg.js"></script>
+<script src="js/jquery.number.min.js"></script>
+<script src="js/jquery.inputmask.bundle.min.js"></script>
+<script src="js/jquery.numeric.min.js"></script>
+<script src="js/jquery.priceformat.min.js"></script>
+<script src="js/api.js" async defer></script>
+<script>
+    function lazy() {
+        (function() {
+            function logElementEvent(eventName, element) {
+                console.log(
+                    Date.now(),
+                    eventName,
+                    element.getAttribute("data-src")
+                );
+            }
+
+            var callback_enter = function(element) {
+                logElementEvent("🔑 ENTERED", element);
+            };
+            var callback_exit = function(element) {
+                logElementEvent("🚪 EXITED", element);
+            };
+            var callback_reveal = function(element) {
+                logElementEvent("👁️ REVEALED", element);
+            };
+            var callback_loaded = function(element) {
+                logElementEvent("👍 LOADED", element);
+            };
+            var callback_error = function(element) {
+                logElementEvent("💀 ERROR", element);
+                element.src =
+                    "/resimyok.png";
+            };
+            var callback_finish = function() {
+                logElementEvent("✔️ FINISHED", document.documentElement);
+            };
+
+            var ll = new LazyLoad({
+                elements_selector: ".lazy",
+                // Assign the callbacks defined above
+                callback_enter: callback_enter,
+                callback_exit: callback_exit,
+                callback_reveal: callback_reveal,
+                callback_loaded: callback_loaded,
+                callback_error: callback_error,
+                callback_finish: callback_finish
+            });
+        })();
+    }
+
+    function checkEmail(email) {
+
+        var filter = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+
+        if (!filter.test(email)) {
+            //alert('Lütfen uygun formatta bir mail adresi giriniz !');
+            return false;
+        }
+        else{
+            //alert('Mail adresi uygun formattadır.');
+            return true;
+        }
+    }
+
+    $().ready(function () {
+
+        $('.priceFormat').priceFormat({
+            prefix: '',
+            thousandsSeparator: ''
+        });
+        $(":input").inputmask();
+        $('.numeric').numeric();
+
+
+        
+
+        $('.rv_lang-icon').click(function () {
+            $('.rv_language').css('right',0);
+            setTimeout(function () {
+                $('.rv_language').css('right','-200px');
+            },5000);
+        });
+
+        if($('.system_popup').length){
+            $(".system_popup").click();
+        }
+
+    });
+
+    function formKayit(adi){
+
+        var hata = 0;
+        var eHata = 0;
+        var inputSayi = $('.'+adi+' input[type=text]').length;
+        for(var i=0;i<inputSayi;i++){
+            if ($('.'+adi+' input[type=text]:eq('+i+')').prop('required')==true){
+                if ($('.'+adi+' input[type=text]:eq('+i+')').val()==''){
+                    hata++;
+                }
+            }
+        }
+        var emailSayi = $('.'+adi+' input[type=email]').length;
+        for(var i=0;i<emailSayi;i++){
+            if ($('.'+adi+' input[type=email]:eq('+i+')').prop('required')==true){
+                if (($('.'+adi+' input[type=email]:eq('+i+')').val()=='') || (!checkEmail($('.'+adi+' input[type=email]:eq('+i+')').val()))){
+                    eHata++;
+                }
+            }else{
+                if($('.'+adi+' input[type=email]:eq('+i+')').val()!=''){
+                    if(!checkEmail($('.'+adi+' input[type=email]:eq('+i+')').val())){
+                        eHata++;
+                    }
+                }
+            }
+        }
+        var txtSayi = $('.'+adi+' textarea').length;
+        for(var i=0;i<txtSayi;i++){
+            if ($('.'+adi+' textarea:eq('+i+')').prop('required')==true){
+                if ($('.'+adi+' textarea:eq('+i+')').val()==''){
+                    hata++;
+                }
+            }
+        }
+        var selectSayi = $('.'+adi+' select').length;
+        for(var i=0;i<selectSayi;i++){
+            if ($('.'+adi+' select:eq('+i+')').prop('required')==true){
+                if ($('.'+adi+' select:eq('+i+')').val()==''){
+                    hata++;
+                }
+            }
+        }
+        var fileSayi = $('.'+adi+' input[type=file]').length;
+        for(var i=0;i<fileSayi;i++){
+            if ($('.'+adi+' input[type=file]:eq('+i+')').prop('required')==true){
+                var fileId = $('.'+adi+' input[type=file]:eq('+i+')').attr('id');
+                if (document.getElementById(fileId).files[0]==undefined){
+                    hata++;
+                }
+            }
+        }
+
+
+        var checkSayi = $('.'+adi+' input[type=checkbox]').length;
+        for(var i=0;i<checkSayi;i++){
+            checkClass = $('.'+adi+' input[type=checkbox]:eq('+i+')').attr('class');
+            var icCheckEdilen = 0;
+            var icCheckSayi = $('.'+adi+' .'+checkClass).length;
+            if ($('.'+adi+' .'+checkClass+':eq(0)').prop('required')==true) {
+                for(var y=0;y<icCheckSayi;y++){
+                    if($('.'+adi+' .'+checkClass+':eq('+y+')').prop('checked')==true){
+                        icCheckEdilen++;
+                    }
+                }
+
+                if(icCheckEdilen==0){
+                    hata++;
+                }
+
+            }
+
+        }
+
+        var radioSayi = $('.'+adi+' input[type=radio]').length;
+        for(var i=0;i<radioSayi;i++){
+            radioClass = $('.'+adi+' input[type=radio]:eq('+i+')').attr('class');
+            var icRadioEdilen = 0;
+            var icRadioSayi = $('.'+adi+' .'+radioClass).length;
+            if ($('.'+adi+' .'+radioClass+':eq(0)').prop('required')==true) {
+                for(var y=0;y<icRadioSayi;y++){
+                    if($('.'+adi+' .'+radioClass+':eq('+y+')').prop('checked')==true){
+                        icRadioEdilen++;
+                    }
+                }
+
+                if(icRadioEdilen==0){
+                    hata++;
+                }
+
+            }
+
+        }
+
+        if(hata>0){
+            $('.hata_'+adi).html('<div class="alert alert-danger">Παρακαλώ συμπληρώστε τα απαιτούμενα πεδία.</div>');
+            return false;
+        }
+
+        if(eHata>0){
+            $('.hata_'+adi).html('<div class="alert alert-danger">Η διεύθυνση ηλεκτρονικού ταχυδρομείου σας είναι έγκυρη ή κενό.</div>');
+            return false;
+        }
+
+        $('.'+adi+' .formBtn').html('<img src="/assets/img/loading.svg" width="22px">');
+        $('.'+adi+' .formBtn').prop('disabled',true);
+
+        $('.'+adi).submit();
+
+
+
+
+
+    }
+
+
+
+</script>
+
+
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+306985900073", // WhatsApp numaranızı buraya girin
+                call_to_action: "Γεια σας, Πώς μπορώ να σας βοηθήσω;", // Görünecek metin
+                position: "right", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+
+        
+    </body>
+</html>
